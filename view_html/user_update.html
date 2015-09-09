@@ -1,0 +1,38 @@
+<script type="text/javascript">
+		var s = <{$flag}>;
+		if(s==0){
+			$.pdialog.closeCurrent();
+		}
+</script>
+<div class="page">
+	<div class="pageContent">
+		<form method="post" action="updateact.php?p=project" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogMyAjaxDone );">
+			<div class="pageFormContent" layoutH="56">
+				<input type="hidden" name="id" value="<{$arr.id}>">
+				<p>
+					<label>用户名：</label>
+					<input name="name" class="required" type="text" size="30" value="<{$arr.project_name}>" alt="请输入用户名称"/>
+				</p>
+				<p>
+					<label>账号：</label>
+					<input name="username" class="required" type="text" size="30" value="<{$arr.project_manager}>" alt="请输入账号"/>
+				</p>
+				<p>
+					<label>密码：</label>
+					<input name="projectManager" class="required" type="text" size="30" value="<{$arr.project_manager}>" alt="请输入密码"/>
+				</p>
+			</div>
+			<div class="formBar">
+				<ul>
+					<!-- <li><a class="buttonActive" href="#"><span>保存</span></a></li>
+					<li><input type="submit" class="buttonActive" href="#" value="保存" /></li> -->
+					<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+					<li>
+						<div class="button"><div class="buttonContent"><button class="close" type="Button" value="关闭">取消</button></div></div>
+						<!-- <div class="button"><div class="buttonContent"><button type="Button" onclick="navTab.closeCurrentTab()">取消</button></div></div> -->
+					</li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>

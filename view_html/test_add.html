@@ -1,0 +1,30 @@
+<script type="text/javascript">
+	document.body.oncopy=function(){
+		return true;
+	}
+</script>
+<div class="page">
+	<div class="pageContent">
+		<form method="post" action="addact.php?p=test" class="pageForm required-validate" onsubmit="return validateCallback(this,dialogMyAjaxDone );">
+			<div class="pageFormContent" layoutH="56">
+				<p>
+					<label>字段1：</label>
+					<input name="field1" class="required" type="text" size="30" alt="请输入字段1"/>
+				</p>
+				<p>
+					<label>字段2：</label>
+					<!-- <input name="code" class="digits" type="text" size="30" alt="请输入数字"/> -->
+					<input name="field2" class="required" type="text" size="30" alt="请输入字段2"/>
+				</p>
+			</div>
+			<div class="formBar">
+				<ul>
+					<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+					<li>
+						<div class="button"><div class="buttonContent"><button class="close" type="Button" value="关闭">取消</button></div></div>
+					</li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>
